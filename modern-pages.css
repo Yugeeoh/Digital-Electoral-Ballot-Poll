@@ -1,0 +1,669 @@
+/* ============================================
+   MODERN PAGE STYLING - RESULTS, CANDIDATES, 
+   VOTING, AND SETTINGS PAGES
+   ============================================ */
+
+/* Page Header Enhancement */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: 2.75rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.5px;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
+}
+
+/* Page Container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Page Content */
+.page-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Results Specific Styling */
+.results-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.result-item {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2f5 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.result-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+.result-item h3 {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.result-item p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  margin: 1rem 0 0.5rem 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Candidates Grid */
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.candidate-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.candidate-card:hover {
+  border-color: #667eea;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.2);
+}
+
+.candidate-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.candidate-party {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.candidate-info {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9ff;
+  border-left: 3px solid #667eea;
+  border-radius: 6px;
+}
+
+.candidate-info p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Voting Page Styling */
+.voting-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.election-poll {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+}
+
+.election-year h2 {
+  margin: 0 0 1.5rem 0;
+  color: #667eea;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.question {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.question p {
+  margin: 0;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8f9ff;
+}
+
+.option-item:hover {
+  border-color: #667eea;
+  background: #f0f2f5;
+}
+
+.option-item input[type="radio"] {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.option-item label {
+  flex: 1;
+  cursor: pointer;
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sbm-btn, .cnc-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.sbm-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.sbm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.sbm-btn:active {
+  transform: translateY(0);
+}
+
+.cnc-btn {
+  background: #e8eef7;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.cnc-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Settings Page Styling */
+.settings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.settings-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 5px solid #667eea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.settings-section:hover {
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+}
+
+.settings-section h3 {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.settings-section p {
+  margin: 0 0 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.settings-section button,
+.settings-section a {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Voting Schedule Form Styles */
+.voting-schedule-form {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.voting-schedule-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.voting-schedule-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.voting-schedule-form label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.voting-schedule-form input[type="date"],
+.voting-schedule-form input[type="time"] {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.voting-schedule-form input[type="date"]:focus,
+.voting-schedule-form input[type="time"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.schedule-info {
+  background: white !important;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  padding: 1rem !important;
+}
+
+.schedule-info p {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.schedule-info strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+#save-voting-schedule,
+#clear-voting-schedule {
+  width: auto;
+  margin-top: 1rem !important;
+}
+
+/* Page Actions */
+.page-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 2rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #e8eef7;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem 1.5rem;
+  margin-top: 3rem;
+  box-shadow: 0 -4px 20px rgba(102, 126, 234, 0.2);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-section h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: 0.5rem 0;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+  color: white;
+  padding-left: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .candidates-grid,
+  .results-col {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .settings-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+
+  .page-header {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .page-content {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .candidates-grid,
+  .results-col {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .page-actions .btn {
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .sbm-btn,
+  .buttons .cnc-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .option-item {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .page-header {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .page-content {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .candidate-card,
+  .result-item,
+  .settings-section {
+    padding: 1.25rem;
+  }
+
+  .candidate-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .candidate-party {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .election-poll {
+    padding: 1.5rem;
+  }
+
+  .election-year h2 {
+    font-size: 1.4rem;
+  }
+
+  .sbm-btn,
+  .cnc-btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+  }
+}

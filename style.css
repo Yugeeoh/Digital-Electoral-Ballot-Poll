@@ -1,0 +1,104 @@
+/* CSS Document */
+
+/* Global Styles */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    background: #7dab9397 url('https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F02917ff9-eae4-4135-a882-d33586c92e84.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1') no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title{
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: #f0f8ffb6;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    width: max-content;
+    margin: 0;
+    color: #689f96;
+    font-weight: 500;
+   transform: scaleX(1.003);
+}
+h1{
+    margin: 0 20px;
+    font-size: x-large;
+}
+.container{
+    backdrop-filter: blur(2.5px);
+   background-color: #bdbdbd96;
+   text-align: left;
+   border-radius:0 0 1em 1em;
+   width: 444px;
+   box-shadow: 0 0 10px #ffffff85;
+}
+h2{
+    margin: 0;
+    color: rgba(50, 92, 128, 0.733);
+    text-align: center;
+    font-weight: 200;
+}
+.question{
+    border-bottom: rgba(50, 92, 128, 0.3)1px solid;;
+}
+h3{
+    margin: 10px;
+    color: rgba(50, 92, 128, 0.733);
+    font-weight: 200;
+}
+.options{
+    margin: 15px;
+    color: rgba(26, 37, 46, 0.733);
+}
+cite{
+    font-size: x-small;
+}
+.buttons{
+    transform: translateY(-10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 2%;
+    left: 40%;
+}
+.sbm-btn, .cnc-btn{
+    width: 95px;
+    height: 40px;
+    border: none;
+    background-color: #77b4a9;
+    color: #fff;
+    border-radius: 20%;
+}
+.inec-logo img{
+    display: none;
+    position: absolute;
+    width: 50px;
+    border-radius: 50%;
+    left: 10%;
+}
+.candidate-a, .candidate-b, .candidate-c{
+      display: list-item;
+      width: 80%;
+      list-style: none;
+}
+.inec-logo p{
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    left: 3%;
+    top: 38%;
+    font-weight: 700;
+    color: #00000097;
+}
+
+

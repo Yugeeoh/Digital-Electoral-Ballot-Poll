@@ -1,0 +1,436 @@
+/* CSS Document */
+
+/* Global Styles */
+body {
+    font-family: 'Stack Sans Notch', sans-serif;
+    height: 200vh;
+    width: 100vw;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-page {                         
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    background-color: #0000009f;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Title Styles */
+.welcome-title{
+    backdrop-filter: blur(1px);
+    font-size: 20px;
+    color: #2b8bc2af;
+    background: linear-gradient(180deg, #ffffffea 30%, transparent 60%, #a4a4a490 100%);
+    padding: 40px;
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    border-radius: 0 0 2em 2em;
+    z-index: 200;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+.welcome-title .menu-icon{
+    position: absolute;
+    left: 2%;
+    top: 6%;
+    cursor: pointer;
+    margin-right: auto;
+}
+.menu-box{
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    background-color: #ffffffb3;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+    display: none;
+    width: 150px;
+    flex-direction: column;
+    z-index: 300;
+}
+.menu-box .menu-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2b8bc2;
+    border-bottom: 1px solid #2b8bc248;
+    padding-bottom: 5px;
+}
+.menu-box .menu-list a{
+    text-decoration: none;
+    color: #000000;
+}
+.menu-box .menu-list a li{
+    list-style: none;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.menu-box .menu-list a li:hover{
+    color: #2b8bc2;
+}
+.menu-box .menu-list a li:active{
+    color: #6797c4;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.menu-list .mn-db, .menu-list .mn-cm, .menu-list .mn-ed, .menu-list .mn-os, .menu-list .mn-au{
+    width: 150px;
+    height: 47px;
+    border: #0000002f 1px solid;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+    animation: linearTransit 4s infinite forwards;
+    cursor: pointer;
+    animation-timing-function: ease-in-out;
+}
+.menu-list .mn-db:hover, .menu-list .mn-cm:hover, .menu-list .mn-ed:hover, .menu-list .mn-os:hover, .menu-list .mn-au:hover{
+    border: #2b8bc2 1px solid;
+}
+.menu-list .mn-db:active, .menu-list .mn-cm:active, .menu-list .mn-ed:active, .menu-list .mn-os:active, .menu-list .mn-au:active{
+    border: #6797c4 1px solid;
+}
+.menu-list .js-mn-db, .menu-list .js-mn-cm, .menu-list .js-mn-ed, .menu-list .js-mn-os, .menu-list .js-mn-au{
+    backdrop-filter: blur(1.5px);
+    box-shadow: 0 0 3px #00000046;
+    opacity: 0.7;
+    width: 100%;
+    border: #0000002f 1px solid;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+.menu-list .js-mn-db:hover, .menu-list .js-mn-cm:hover, .menu-list .js-mn-ed:hover, .menu-list .js-mn-os:hover, .menu-list .js-mn-au:hover{
+    opacity: 1;
+    border: #2b8bc2 1px solid;
+}
+.menu-list .js-mn-db:active, .menu-list .js-mn-cm:active, .menu-list .js-mn-ed:active, .menu-list .js-mn-os:active, .menu-list .js-mn-au:active{
+    border: #6797c4 1px solid;
+    transform: scale(1.08);
+    box-shadow: 0 0 3px #000000;
+}
+.menu-list .mn-logout-btn{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logout-btn{
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.logout-btn:hover{
+    background-color: #2b8bc2af; 
+}
+.logout-btn:active{
+    background-color: #49b6d480;
+    transform: scale(0.9);
+}
+.welcome-title h1{
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+.welcome-title .slogan{
+    position: absolute;
+    top: 40%;
+    font-size: large;
+    color: #6797c4a1;
+    animation: scale 4s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+.social-media{
+    margin-top: 10px;
+    position: relative;
+    right: 30%;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.social-media a img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.social-media a img:hover{
+    transform: scale(1.2);
+}
+.social-media p{
+    color: #ffffffa1;
+    font-size: 12px;
+    margin: 0;
+}
+a > .vm-bx{
+    position: absolute;
+    opacity: 0.8;
+    background-color: #00000052;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 25px;
+    bottom: 18%;
+    left: 48%;
+    animation: hopOn 4s infinite alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+ }
+ .vm-bx:hover{
+    opacity: 1;
+ }
+ .view-more{
+    display: flex;
+    position: relative;
+    animation: hopOn 1s infinite alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-play-state: running;
+ }
+
+.powered-by{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: 12px;
+    color: #ffffffa1;
+    cursor: none;
+}
+#title-scroll{
+    opacity: 0;
+}
+.welcome-title-scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 18px;
+    border-radius: 0 0 0.75em 0.75em;
+    z-index: 999;
+    width: 100%;
+    transition: transform 0.35s ease, opacity 0.35s ease, backdrop-filter 0.3s ease;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    color: #2b8bc2;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* when visible (JS sets inline styles, but this class can also be used) */
+.welcome-title-scroll.visible{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu-icon-pic{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.welcome-title-scroll h1{
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+.welcome-title-scroll .slogan{
+    position: relative;
+    top: 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.logo{
+    transform: none;
+    height: 44px;
+    width: auto;
+}
+
+@media (max-width: 700px) {
+    .welcome-title-scroll{ padding: 6px 12px; height:56px; }
+    .welcome-title-scroll h1{ font-size: 15px; }
+    .social-media{ right: 0; gap: 8px; }
+    .powered-by{ display: none; }
+}
+cite{
+    font-size: 10px;
+    color: #ffffffa1;
+    margin-top:0;
+    text-align: center;
+    display: block;
+}
+
+/* Welcome Container Styles */
+.welcome-container {
+    backdrop-filter: blur(2.5px);
+    background: linear-gradient(180deg, transparent 60%, #00000038 70%, #ffffff30 95%);
+    border-radius: 0 0 2em 2em;
+    padding: 20px 40px;
+    text-align: center;
+    color: #689f96;
+    box-shadow: 10px 40px 40px #00000085;
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    width: 92.6%;
+    padding: 20px 40px;
+    min-width: 600px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-info{
+    position: relative;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffffb4;
+    width: 600px;
+}
+.start-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #77b4a9;
+    color: #ffffffb4;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20%;
+}
+.start-btn:hover{
+    background-color: #689f96a9;
+    backdrop-filter: blur(1px);
+}
+@media (max-width: 700px) {
+    .welcome-container {
+        min-width: 300px;
+        padding: 20px;
+    }
+    .welcome-info{
+        width: 100%;
+        font-size: 16px;
+    }
+}
+@keyframes scale {
+    0% {
+        color: #2b8bc234;
+        transform: scale(1);
+    }
+    20% {
+        color: #2b8bc2da;
+        transform: scale(1.1);
+    }
+    40% {
+        color: #2b8bc234;
+        transform: scale(1);
+    }   
+    60%{
+        color: #2bc2b3d0;
+        transform: rotateY(180deg);
+    }
+    80%{
+        color: #847f22a7;
+        transform: rotateY(10deg);
+    }
+    90%{
+        color: #83c22b;
+        transform: skewY(10px);
+    }
+    100%{
+        color:#1782d3;
+        transform: scale(0.7);
+    }
+}
+
+@keyframes linearTransit{
+    0%{
+       border: none;
+       background: linear-gradient(90deg, #00000064, #fff);
+    }
+    20%{
+        border: none;
+       background: linear-gradient(100deg, #00000064, #fff);
+        
+    } 
+40%{
+       border: none;
+       background: linear-gradient(120deg, #00000064, #fff);
+     }
+     60%{
+        border: none;
+        background: linear-gradient(130deg, #00000064, #fff);
+        
+     }
+    80%{
+        border: none;
+       background: linear-gradient(120deg, #00000064, #fff);
+    }
+    90%{
+        border: none;
+       background: linear-gradient(110deg, #00000064, #fff);  
+    }
+    100%{
+        border: none;
+       background: linear-gradient(90deg, #00000064, #fff);
+    }
+}
+
+@keyframes menuSlideIn {
+    0%{
+       opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+}
+
+@keyframes menuSlideOut {
+    0%{
+       opacity: 0.9;
+    }
+    100%{
+       opacity: 0;
+    }
+}
+
+@keyframes hopOn {
+    0%{
+      transform: translateY(-4px);
+    }
+    100%{
+        transform: translateY(6px);
+    }
+    
+}
