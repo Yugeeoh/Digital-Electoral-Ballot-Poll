@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard - Digital Electoral Ballot Poll</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="styles/enhancements.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+  <header class="title">
+    <h1>📊 Dashboard</h1>
+    <cite>Powered by Chalcedony Technologies Inc.</cite>
+  </header>
+  <main class="dashboard-container">
+    <h2>Election Overview</h2>
+    <p>Real-time statistics and analytics for the electoral process.</p>
+    
+    <!-- Key Metrics Section -->
+    <section class="metrics-grid" aria-live="polite">
+      <div class="metric-card">
+        <h4>Total Votes</h4>
+        <p class="metric-value" id="total-votes">0</p>
+      </div>
+      <div class="metric-card">
+        <h4>Voter Turnout</h4>
+        <p class="metric-value" id="turnout-percent">0%</p>
+      </div>
+      <div class="metric-card">
+        <h4>Registered Voters</h4>
+        <p class="metric-value" id="registered-voters">1000</p>
+      </div>
+      <div class="metric-card">
+        <h4>Active Candidates</h4>
+        <p class="metric-value" id="active-candidates">3</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <div class="chart-container">
+        <h3>Election Results (Pie Chart)</h3>
+        <div class="chart-wrapper">
+          <canvas id="electionResultsChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Vote Distribution (Bar Chart)</h3>
+        <div class="chart-wrapper">
+          <canvas id="voteDistributionChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Vote Turnout Over Time</h3>
+        <div class="chart-wrapper">
+          <canvas id="turnoutChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Demographic Breakdown</h3>
+        <div class="chart-wrapper">
+          <canvas id="demographicChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Campaign Expenses by Candidate</h3>
+        <div class="chart-wrapper">
+          <canvas id="expensesChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h3>Age Group Distribution</h3>
+        <div class="chart-wrapper">
+          <canvas id="ageGroupChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Candidates Overview -->
+    <section id="candidates">
+      <h3>Candidate Performance</h3>
+      <div id="candidates-list" class="candidates-grid"></div>
+    </section>
+
+    <!-- Voting History -->
+    <section id="history">
+      <h3>Recent Voting Activity</h3>
+      <div id="voting-history"></div>
+    </section>
+
+    <!-- Navigation and Actions -->
+    <p class="navigation-links">
+      <a href="voting-page.html">🗳️ Go to Voting Page</a> • 
+      <a href="results.html">📈 View Results</a> • 
+      <a href="kyc-admin.html">🔐 KYC Management</a> • 
+      <a href="admin-candidates.html">👥 Manage Candidates</a> • 
+      <a href="welcome-page.html">🏠 Return to Home</a>
+    </p>
+    <p>
+      <button id="reset-election" class="sbm-btn">🔄 Reset Election Data</button>
+      <button id="export-report" class="sbm-btn">📥 Export Report</button>
+    </p>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Digital Electoral Ballot Poll. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="support.html">Support</a> | 
+      <a href="community.html">Community</a> | 
+      <a href="welcome-page.html">Home</a>
+    </div>
+  </footer>
+  <script type="module" src="scripts/dashboard.js"></script>
+</body>
+</html>

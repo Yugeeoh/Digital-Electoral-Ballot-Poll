@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin Sign Up - DEBP</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="stylesheet" href="styles/enhancements.css">
+</head>
+<body>
+  <header class="title">
+    <h1>🔐 Admin Registration</h1>
+    <cite>Digital Electoral Ballot Poll - Admin Portal</cite>
+  </header>
+  <main class="container">
+    <div style="max-width: 500px; margin: 0 auto;">
+      <form id="admin-signup-form">
+        <h2>Register as Admin</h2>
+        <p>Complete this form to request admin access to the electoral management system.</p>
+        
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <div class="form-group">
+            <label for="admin-fullname">Full Name</label>
+            <input id="admin-fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="admin-age">Age</label>
+              <input id="admin-age" name="age" type="number" min="21" max="120" placeholder="Enter your age" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="admin-gender">Gender</label>
+              <select id="admin-gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Contact Information -->
+        <fieldset>
+          <legend>Contact Information</legend>
+          
+          <div class="form-group">
+            <label for="admin-phone">Phone Number</label>
+            <input id="admin-phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="admin-email">Email Address</label>
+            <input id="admin-email" name="email" type="email" placeholder="Enter your email address" required>
+          </div>
+        </fieldset>
+        
+        <!-- Department/Organization -->
+        <fieldset>
+          <legend>Organization Details</legend>
+          
+          <div class="form-group">
+            <label for="admin-department">Department</label>
+            <input id="admin-department" name="department" type="text" placeholder="Enter your department" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="admin-role">Requested Role</label>
+            <select id="admin-role" name="role" required>
+              <option value="">Select Role</option>
+              <option value="election-officer">Election Officer</option>
+              <option value="candidate-manager">Candidate Manager</option>
+              <option value="results-auditor">Results Auditor</option>
+              <option value="system-admin">System Administrator</option>
+              <option value="compliance-officer">Compliance Officer</option>
+            </select>
+          </div>
+        </fieldset>
+        
+        <!-- Account Credentials -->
+        <fieldset>
+          <legend>Account Credentials</legend>
+          
+          <div class="form-group">
+            <label for="admin-username">Admin Username</label>
+            <input id="admin-username" name="username" type="text" placeholder="Choose a username" minlength="4" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input id="admin-password" name="password" type="password" placeholder="Create a strong password" minlength="8" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="admin-confirm-password">Confirm Password</label>
+            <input id="admin-confirm-password" name="confirm_password" type="password" placeholder="Confirm your password" minlength="8" required>
+          </div>
+        </fieldset>
+        
+        <!-- Authorization -->
+        <fieldset>
+          <legend>Authorization & Verification</legend>
+          
+          <div class="form-group">
+            <label for="admin-id">Government ID Number</label>
+            <input id="admin-id" name="id_number" type="text" placeholder="Enter your government ID number" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="admin-authorization">Authorization Code</label>
+            <input id="admin-authorization" name="authorization_code" type="text" placeholder="Enter the authorization code provided by the system administrator" required>
+          </div>
+          
+          <div class="form-group checkbox">
+            <input id="admin-terms" name="terms" type="checkbox" required>
+            <label for="admin-terms">I agree to the Admin Terms & Conditions and Privacy Policy</label>
+          </div>
+        </fieldset>
+        
+        <div id="admin-signup-error" class="error-message" style="display:none;"></div>
+        <div id="admin-signup-success" class="success-message" style="display:none;"></div>
+        
+        <button type="submit" class="sbm-btn">Register as Admin</button>
+      </form>
+
+      <div class="auth-links">
+        <p>Already have an admin account?</p>
+        <a href="admin-login.html" style="display: inline-block; width: auto;">Admin Sign In</a>
+      </div>
+
+      <p style="text-align: center; margin-top: 1.5rem;">
+        <a href="welcome-page.html">← Back to Home</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Digital Electoral Ballot Poll. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="support.html">Support</a> | 
+      <a href="welcome-page.html">Home</a> | 
+      <a href="admin-login.html">Admin Login</a>
+    </div>
+  </footer>
+  <script type="module" src="scripts/login.js"></script>
+</body>
+</html>

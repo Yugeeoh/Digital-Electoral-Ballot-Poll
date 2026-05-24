@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin Login - DEBP</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="stylesheet" href="styles/enhancements.css">
+</head>
+<body>
+  <header class="title">
+    <h1>🔐 Admin Sign In</h1>
+    <cite>Digital Electoral Ballot Poll - Admin Portal</cite>
+  </header>
+  <main class="container">
+    <div style="max-width: 420px; margin: 0 auto;">
+      <form id="admin-login-form">
+        <h2>Admin Portal</h2>
+        <p>Enter your admin credentials to access the management dashboard</p>
+        
+        <div class="form-group">
+          <label for="admin-username">Admin Username</label>
+          <input id="admin-username" name="username" type="text" placeholder="Enter your admin username" required autofocus>
+        </div>
+        
+        <div class="form-group">
+          <label for="admin-password">Admin Password</label>
+          <input id="admin-password" name="password" type="password" placeholder="Enter your admin password" required>
+        </div>
+        
+        <div id="admin-login-error" class="error-message" style="display:none;"></div>
+        <div id="admin-login-success" class="success-message" style="display:none;"></div>
+        
+        <button type="submit" class="sbm-btn">Sign In</button>
+        
+        <div class="forgot-password-link">
+          <a href="forgotten-password.html">Forgot your password?</a>
+        </div>
+      </form>
+
+      <div class="auth-links">
+        <p>Don't have an admin account? Request access</p>
+        <a href="admin-signup.html" style="display: inline-block; width: auto;">Admin Registration</a>
+      </div>
+
+      <div class="demo-credentials">
+        <p>📝 Demo Credentials:</p>
+        <p>Admin: <code>admin</code> / <code>admin123</code></p>
+      </div>
+
+      <p style="text-align: center; margin-top: 1.5rem;">
+        <a href="welcome-page.html">← Back to Home</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Digital Electoral Ballot Poll. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="support.html">Support</a> | 
+      <a href="welcome-page.html">Home</a> | 
+      <a href="login.html">User Login</a>
+    </div>
+  </footer>
+  <script type="module" src="scripts/login.js"></script>
+</body>
+</html>

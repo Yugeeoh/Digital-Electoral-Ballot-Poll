@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign Up - DEBP</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="stylesheet" href="styles/enhancements.css">
+</head>
+<body>
+  <header class="title">
+    <img src="images/createAcct.svg" alt="" style="transform: translateY(12px);animation: slideIn var(--transition-normal); width: 50px;"> 
+    <h1>Create Account</h1>
+    <cite>Digital Electoral Ballot Poll</cite>
+  </header>
+  <main class="container">
+    <div style="max-width: 500px; margin: 0 auto;">
+      <form id="signup-form">
+        <h2>Join DEBP Today</h2>
+        <p>Create a new account to participate in the electoral process.</p>
+        
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <div class="form-group">
+            <label for="signup-fullname">Full Name</label>
+            <input id="signup-fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="signup-age">Age</label>
+              <input id="signup-age" name="age" type="number" min="18" max="120" placeholder="Enter your age" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="signup-gender">Gender</label>
+              <select id="signup-gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Address Information -->
+        <fieldset>
+          <legend>Address Information</legend>
+          
+          <div class="form-group">
+            <label for="signup-address">Street Address</label>
+            <input id="signup-address" name="address" type="text" placeholder="Enter your street address" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="signup-city">City</label>
+              <input id="signup-city" name="city" type="text" placeholder="Enter your city" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="signup-state">State</label>
+              <input id="signup-state" name="state" type="text" placeholder="Enter your state" required>
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Contact Information -->
+        <fieldset>
+          <legend>Contact Information</legend>
+          
+          <div class="form-group">
+            <label for="signup-phone">Phone Number</label>
+            <input id="signup-phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input id="signup-email" name="email" type="email" placeholder="Enter your email address" required>
+          </div>
+        </fieldset>
+        
+        <!-- Identification -->
+        <fieldset>
+          <legend>Identification</legend>
+          
+          <div class="form-group">
+            <label for="signup-nimc">NIMC ID Number</label>
+            <input id="signup-nimc" name="nimc" type="text" placeholder="Enter your NIMC ID number" required>
+          </div>
+        </fieldset>
+        
+        <!-- Account Credentials -->
+        <fieldset>
+          <legend>Account Credentials</legend>
+          
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input id="signup-username" name="username" type="text" placeholder="Choose a username (min. 3 characters)" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input id="signup-password" name="password" type="password" placeholder="Enter password (min. 6 characters)" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input id="signup-confirm-password" name="confirm-password" type="password" placeholder="Re-enter your password" required>
+          </div>
+        </fieldset>
+        
+        <div id="password-match-error" class="error-message" style="display:none;">❌ Passwords do not match. Please try again.</div>
+        <div id="signup-error" class="error-message" style="display:none;"></div>
+        <div id="signup-success" class="success-message" style="display:none;"></div>
+        
+        <button type="submit" class="sbm-btn">Create Account</button>
+      </form>
+      
+      <div class="auth-links">
+        <p>Already have an account?</p>
+        <a href="login.html" style="display: inline-block; width: auto;">Sign In Here</a>
+      </div>
+
+      <p style="text-align: center; margin-top: 1.5rem;">
+        <a href="welcome-page.html">← Back to Home</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2026 Digital Electoral Ballot Poll. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="support.html">Support</a> | 
+      <a href="community.html">Community</a> | 
+      <a href="welcome-page.html">Home</a>
+    </div>
+  </footer>
+  <script type="module" src="scripts/sign-up.js"></script>
+</body>
+</html>
